@@ -10,7 +10,7 @@
 
 module.exports = function (grunt) {
 
-  grunt.registerMultiTask('i18nextract', 'Generate json language file(s) for angular-translate project', function () {
+  grunt.registerMultiTask('i18nextract-visonic', 'Generate json language file(s) for angular-translate project', function () {
 
     // Shorcuts!
     var Translations = require('./lib/translations.js');
