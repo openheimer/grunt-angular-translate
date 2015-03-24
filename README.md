@@ -77,6 +77,7 @@ Options src and jsonSrc may be specified according to the grunt Configuring task
 
 - [src](#src)
 - [nullEmpty](#nullempty-v026)
+- [keyEmpty](#keyempty)
 - [namespace](#namespace-v026)
 - [interpolation](#interpolation)
 - [jsonSrc](#jsonSrc)
@@ -106,6 +107,14 @@ Default: `false`
 Example: `true`
 
 If set to true, it will replace all final empty translations by *null* value.
+
+#### keyEmpty
+Type: `Boolean`
+Default: `false`
+
+Example: `true`
+
+If set to true, it will replace all final empty translations by key-translation value.
 
 #### namespace (v0.2.6)
 
