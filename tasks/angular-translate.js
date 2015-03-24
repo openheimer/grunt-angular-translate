@@ -33,6 +33,7 @@ module.exports = function (grunt) {
       interpolation = this.data.interpolation || {startDelimiter: '{{', endDelimiter: '}}'},
       source = this.data.source || '',
       nullEmpty = this.data.nullEmpty || false,
+      keyEmpty = this.data.keyEmpty || false,
       namespace = this.data.namespace || false,
       prefix = this.data.prefix || '',
       safeMode = this.data.safeMode ? true : false,
@@ -283,7 +284,8 @@ module.exports = function (grunt) {
     var _translation = new Translations({
       "safeMode": safeMode,
       "tree": namespace,
-      "nullEmpty": nullEmpty
+      "nullEmpty": nullEmpty,
+      "keyEmpty": keyEmpty
     }, results);
 
     // Build all output langage files

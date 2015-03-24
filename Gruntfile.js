@@ -201,6 +201,15 @@ module.exports = function(grunt) {
           'tt-default="\'((?:\\\\.|[^\'\\\\])*)\'\\|translate"'
         ],
         dest:     'tmp'
+      },
+
+      using_key_on_empty: {
+        prefix:   '11_',
+        suffix:   '.json',
+        src:      [ 'test/fixtures/*.html', 'test/fixtures/*.js' ],
+        lang:     ['fr_FR'],
+        keyEmpty: true,
+        dest:     'tmp'
       }
 
     },

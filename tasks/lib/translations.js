@@ -103,7 +103,15 @@ Translations.prototype.getMergedTranslations = function (obj, useDefault) {
       } else if (__isValidTranslation(v)) {   // Get from extracted translations
         _returnTranslations[k] = v;
       } else {                                // Feed empty translation (null or "")
-        _returnTranslations[k] = self.params.nullEmpty ? null : "";
+          if( self.params.nullEmpty ){
+              _returnTranslations[k] = null;
+          }
+          else if( self.params.keyEmpty ){
+            _returnTranslations[k] = k;
+          }
+          else{
+            _returnTranslations[k] = "";
+          }
       }
     });
   }

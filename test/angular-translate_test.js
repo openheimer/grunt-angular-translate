@@ -132,6 +132,18 @@ exports.i18nextract = {
     test.equal( actual, expected, 'Should equal.' );
 
     test.done();
-  }
+  },
+
+    using_key_on_empty: function(test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/11_fr_FR.json');
+        grunt.log.writeflags(actual);
+        var expected = grunt.file.read('test/expected/11_fr_FR.json');
+        grunt.log.writeflags(expected);
+        test.equal(actual, expected, '11 - using_key_on_empty should be equal.');
+
+        test.done();
+    },
 
 };
