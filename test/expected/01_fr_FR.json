@@ -33,5 +33,6 @@
     "JavascriptServiceInstantSimpleQuote 1/2 with var \"{name}\".": null,
     "JavascriptServiceInstantDoubleQuote 2/2 with var \"{name}\".": null,
     "JavascriptFilter 1/2 with var \"{name}\"": "my {name} javascript filter",
-    "JavascriptFilter 2/2 without var": null
+    "JavascriptFilter 2/2 without var": null,
+    "Some New Text": null
 }

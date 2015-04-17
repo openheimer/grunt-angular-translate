@@ -65,7 +65,7 @@ exports.i18nextract = {
 
     var actual = grunt.file.read( 'tmp/05_en_US.json' );
     var expected = grunt.file.read( 'test/expected/05_en_US.json' );
-    test.equal( actual, expected, 'Should equal.' );
+    test.equal( actual, expected, '05 - Should equal.' );
 
     test.done();
   },

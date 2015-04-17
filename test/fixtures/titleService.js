@@ -2,6 +2,8 @@ angular.module('titleService', [])
 
   .factory('titleService', function ($state, $document, $filter, $translate) {
 
+    // @i18extract: "Some New Text"
+
     $state.state('home', {
       url: '/home',
       data: {

@@ -104,6 +104,7 @@ module.exports = function (grunt) {
             case "JavascriptServiceSimpleQuote":
             case "JavascriptServiceInstantSimpleQuote":
             case "JavascriptFilterSimpleQuote":
+            case "JavascriptComment":
             case "HtmlNgBindHtml":
               translationKey = translationKey.replace(/\\\'/g, "'");
               break;
@@ -161,7 +162,8 @@ module.exports = function (grunt) {
       JavascriptServiceInstantSimpleQuote: '\\$translate\\.instant\\(\\s*\'((?:\\\\.|[^\'\\\\])*)\'[^\\)]*\\)',
       JavascriptServiceInstantDoubleQuote: '\\$translate\\.instant\\(\\s*"((?:\\\\.|[^"\\\\])*)"[^\\)]*\\)',
       JavascriptFilterSimpleQuote: '\\$filter\\(\\s*\'translate\'\\s*\\)\\s*\\(\\s*\'((?:\\\\.|[^\'\\\\])*)\'[^\\)]*\\)',
-      JavascriptFilterDoubleQuote: '\\$filter\\(\\s*"translate"\\s*\\)\\s*\\(\\s*"((?:\\\\.|[^"\\\\\])*)"[^\\)]*\\)'
+      JavascriptFilterDoubleQuote: '\\$filter\\(\\s*"translate"\\s*\\)\\s*\\(\\s*"((?:\\\\.|[^"\\\\\])*)"[^\\)]*\\)',
+      JavascriptComment: '\\/\\/\\s?@i18extract:\\s?[\",\']?([^\"\']*)[\",\']?'
     };
 
     _.forEach(customRegex, function (regex, key) {
@@ -247,6 +249,7 @@ module.exports = function (grunt) {
           case "HtmlDirectivePluralFirst":
           case "JavascriptFilterSimpleQuote":
           case "JavascriptFilterDoubleQuote":
+          case "JavascriptComment":
             // Match all occurences
             var matches = content.match(_regex);
             if (_.isArray(matches) && matches.length) {
