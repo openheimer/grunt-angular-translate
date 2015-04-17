@@ -163,7 +163,7 @@ module.exports = function (grunt) {
       JavascriptServiceInstantDoubleQuote: '\\$translate\\.instant\\(\\s*"((?:\\\\.|[^"\\\\])*)"[^\\)]*\\)',
       JavascriptFilterSimpleQuote: '\\$filter\\(\\s*\'translate\'\\s*\\)\\s*\\(\\s*\'((?:\\\\.|[^\'\\\\])*)\'[^\\)]*\\)',
       JavascriptFilterDoubleQuote: '\\$filter\\(\\s*"translate"\\s*\\)\\s*\\(\\s*"((?:\\\\.|[^"\\\\\])*)"[^\\)]*\\)',
-      JavascriptComment: '\\/\\/\\s?@i18extract:\\s?[\",\']?([^\"\']*)[\",\']?'
+      JavascriptComment: '\\/\\/\\s?@translate:\\s?[\",\']?([^\"\']*)[\",\']?'
     };
 
     _.forEach(customRegex, function (regex, key) {
